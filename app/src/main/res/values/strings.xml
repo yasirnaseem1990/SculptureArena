@@ -8,4 +8,7 @@
     <string name="txt_search_results_for">Search results for %1s</string>
     <string name="loading">Loading...</string>
     <string name="txt_retry">Retry</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="photo_detail">Photo Detail</string>
 </resources>

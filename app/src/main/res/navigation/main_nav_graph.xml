@@ -9,5 +9,14 @@
         android:id="@+id/homeFragment"
         android:name="com.yasir.sculpture.arena.view.fragment.home.HomeFragment"
         android:label="@string/home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_photoDetailFragment"
+            app:destination="@id/photoDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoDetailFragment"
+        android:name="com.yasir.sculpture.arena.view.fragment.photodetail.PhotoDetailFragment"
+        android:label="@string/photo_detail"
+        tools:layout="@layout/fragment_photo_detail" />
 </navigation>

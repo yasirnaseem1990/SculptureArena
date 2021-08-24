@@ -5,9 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import androidx.core.os.bundleOf
 import androidx.core.widget.NestedScrollView
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.yasir.sculpture.arena.R
 import com.yasir.sculpture.arena.adapter.PhotosListAdapter
 import com.yasir.sculpture.arena.base.BaseFragment
@@ -30,7 +34,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
 
         photosListAdapter = PhotosListAdapter() { photo, position ->
-
+            val bundle = bundleOf("photo" to photo)
+            findNavController().navigate(R.id.action_homeFragment_to_photoDetailFragment, bundle)
         }
 
         _binding?.recyclerPopularPhotos?.apply {
