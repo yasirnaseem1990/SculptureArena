@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SculptureArena</string>
+
+    <string name="home">Home</string>
+
+    <string name="hint_search_photos_text">Search photos</string>
+    <string name="txt_highlights">Highlights</string>
+    <string name="txt_search_results_for">Search results for %1s</string>
+    <string name="loading">Loading...</string>
+    <string name="txt_retry">Retry</string>
+</resources>
