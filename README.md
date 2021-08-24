@@ -26,5 +26,6 @@ A simple photos gallery application using Unsplash API. Using Android latest Arc
 - [Dependency Injection](https://developer.android.com/training/dependency-injection)
   - [Koin](https://insert-koin.io/t) - Small kotlin Injection library, easier way to incorporate Koin DI into Android apps.
 - [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java.
+- [Coil](https://coil-kt.github.io/coil/getting_started/) - An image loading library for Android backed by Kotlin Coroutines.
 - [Material Components for Android](https://github.com/material-components/material-components-android) - Modular and customizable Material Design UI components for Android.
 
