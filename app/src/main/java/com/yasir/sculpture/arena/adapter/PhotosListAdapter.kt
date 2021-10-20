@@ -2,6 +2,8 @@ package com.yasir.sculpture.arena.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.AsyncListDiffer
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.yasir.sculpture.arena.R
@@ -22,30 +24,44 @@ class PhotosListAdapter(val onPhotoSelected: (photo: PhotoResponseModelItem, pos
     }
 
     override fun onBindViewHolder(holder: PhotoListViewHolder, position: Int) {
-        holder.bind(photoResponseItems[position], position)
+        holder.bind(differ.currentList[position], position)
     }
 
-    override fun getItemCount() = photoResponseItems.size
+    override fun getItemCount() = differ.currentList.size
 
-    fun setPhotosList(photosList: List<PhotoResponseModelItem>) {
+    /*fun setPhotosList(photosList: List<PhotoResponseModelItem>) {
         photoResponseItems.clear()
         photoResponseItems.addAll(photosList)
         notifyDataSetChanged()
-    }
+    }*/
 
     inner class PhotoListViewHolder(val itemBinding: PhotosItemLayoutBinding) : RecyclerView.ViewHolder(itemBinding.root) {
 
-        fun bind(photoResponseModel: PhotoResponseModelItem, position: Int) {
+        fun bind(photos: PhotoResponseModelItem, position: Int) {
             itemBinding.apply {
-                ivPhotos.load(photoResponseModel.urls.thumb) {
+               /* ivPhotos.load(photoResponseModel.urls.thumb) {
                     placeholder(R.color.white)
                     crossfade(true)
-                }
-
+                }*/
+                photoResponseModel = photos
                 cvPhotos.setOnClickListener {
-                    onPhotoSelected(photoResponseModel, position)
+                    onPhotoSelected(photos, position)
                 }
             }
         }
     }
+    private val differCallBack  = object : DiffUtil.ItemCallback<PhotoResponseModelItem>()
+    {
+
+        override fun areItemsTheSame(oldItem: PhotoResponseModelItem, newItem: PhotoResponseModelItem): Boolean {
+            return  oldItem.id== newItem.id
+        }
+
+        override fun areContentsTheSame(oldItem: PhotoResponseModelItem, newItem: PhotoResponseModelItem): Boolean {
+            return  oldItem==newItem
+        }
+
+    }
+
+    val differ = AsyncListDiffer(this, differCallBack)
 }

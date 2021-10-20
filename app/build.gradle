@@ -8,7 +8,7 @@ apply plugin: 'kotlin-android'
 
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.yasir.sculpture.arena"

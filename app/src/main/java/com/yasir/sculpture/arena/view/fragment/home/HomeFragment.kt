@@ -33,7 +33,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        photosListAdapter = PhotosListAdapter() { photo, position ->
+        photosListAdapter = PhotosListAdapter { photo, position ->
             val bundle = bundleOf("photo" to photo)
             findNavController().navigate(R.id.action_homeFragment_to_photoDetailFragment, bundle)
         }
@@ -103,7 +103,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             }
         }
         viewModel.photosResponseModelListData.observe(viewLifecycleOwner) { photos ->
-            photosListAdapter.setPhotosList(photos)
+            photosListAdapter.differ.submitList(photos)
+            /*photosListAdapter.setPhotosList(photos)*/
         }
     }
 
