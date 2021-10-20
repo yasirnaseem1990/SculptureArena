@@ -29,12 +29,6 @@ class PhotosListAdapter(val onPhotoSelected: (photo: PhotoResponseModelItem, pos
 
     override fun getItemCount() = differ.currentList.size
 
-    /*fun setPhotosList(photosList: List<PhotoResponseModelItem>) {
-        photoResponseItems.clear()
-        photoResponseItems.addAll(photosList)
-        notifyDataSetChanged()
-    }*/
-
     inner class PhotoListViewHolder(val itemBinding: PhotosItemLayoutBinding) : RecyclerView.ViewHolder(itemBinding.root) {
 
         fun bind(photos: PhotoResponseModelItem, position: Int) {

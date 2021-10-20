@@ -104,7 +104,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         }
         viewModel.photosResponseModelListData.observe(viewLifecycleOwner) { photos ->
             photosListAdapter.differ.submitList(photos)
-            /*photosListAdapter.setPhotosList(photos)*/
         }
     }
 
