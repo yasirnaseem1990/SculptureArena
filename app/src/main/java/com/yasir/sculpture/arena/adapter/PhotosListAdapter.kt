@@ -33,10 +33,6 @@ class PhotosListAdapter(val onPhotoSelected: (photo: PhotoResponseModelItem, pos
 
         fun bind(photos: PhotoResponseModelItem, position: Int) {
             itemBinding.apply {
-               /* ivPhotos.load(photoResponseModel.urls.thumb) {
-                    placeholder(R.color.white)
-                    crossfade(true)
-                }*/
                 photoResponseModel = photos
                 cvPhotos.setOnClickListener {
                     onPhotoSelected(photos, position)
