@@ -1,2 +1,2 @@
 rootProject.name = "SculptureArena"
-include ':app'
+include (":app")
