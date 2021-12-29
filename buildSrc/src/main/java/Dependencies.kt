@@ -1,0 +1,46 @@
+@Suppress("unused", "MayBeConstant")
+object Dependencies {
+    const val coreKTX = "androidx.core:core-ktx:${Versions.coreKTX}"
+    const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+    const val material = "com.google.android.material:material:${Versions.material}"
+    const val fragmentKTX = "androidx.fragment:fragment-ktx:${Versions.fragmentKTX}"
+    const val activityKTX = "androidx.activity:activity-ktx:${Versions.activityKTX}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constrainLayout}"
+    const val liveDataKTX = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.liveDataKTX}"
+    const val viewModelKTX = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModelKTX}"
+    const val commonJava8 = "androidx.lifecycle:lifecycle-common-java8:${Versions.java8}"
+    const val fragmentNavigationKTX = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationFragmentKTX}"
+    const val navigationUiKTX = "androidx.navigation:navigation-ui-ktx:${Versions.navigationUiKTX}"
+    const val legacySupport = "androidx.legacy:legacy-support-v4:${Versions.legacySupport}"
+    const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesCore}"
+    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesCore}"
+
+    const val koinScope = "org.koin:koin-androidx-scope:${Versions.koin}"
+    const val koinViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
+    const val koinFragment = "org.koin:koin-androidx-fragment:${Versions.koin}"
+
+   const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+   const val okHttp = "com.squareup.okhttp3:okhttp:${Versions.squareUp}"
+   const val okHttpLogging = "com.squareup.okhttp3:logging-interceptor:${Versions.squareUp}"
+   const val ok2Curl = "com.github.mrmike:ok2curl:${Versions.okCurl}"
+   const val retrofitConverterGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+   const val gson = "com.google.code.gson:gson:${Versions.gson}"
+
+   const val coil = "io.coil-kt:coil:${Versions.coil}"
+   const val photoView = "com.github.chrisbanes:PhotoView:${Versions.photoView}"
+   const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
+   const val coreKTXPlus = "androidx.core:core-ktx:+"
+   const val lifecycleViewModelKTX = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.androidxLifecycleViewModel}"
+   const val kotlinStdlibJdk7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlinVersion}"
+
+    //TESTING
+    const val jUnit = "junit:junit:${Versions.jUnit}"
+    const val coreTesting = "androidx.arch.core:core-testing:${Versions.coreTesting}"
+    const val kotlinxCoroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesTest}"
+    const val mockk = "io.mockk:mockk:${Versions.mockk}"
+    const val mockkWebServer = "com.squareup.okhttp3:mockwebserver:${Versions.mockWebServer}"
+    const val extJunit = "androidx.test.ext:junit:${Versions.extJunit}"
+    const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
+    const val mockAndroid = "io.mockk:mockk-android:${Versions.mockAndroid}"
+}
